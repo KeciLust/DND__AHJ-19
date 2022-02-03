@@ -82,8 +82,18 @@ body {
     color: red;
     background-color: rgb(165, 219, 233);
     border: 0;
+    margin-right: 10px;
     
 }
 .res::after {
     content: '\2718';
+}
+.drag {
+    position: absolute;
+    z-index: 100;
+    cursor: grabbing;
+    background-color: rgb(74, 138, 74);
+    pointer-events: none;
+    width: 25%;
+
 }
