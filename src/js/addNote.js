@@ -12,17 +12,16 @@ export default function addNote() {
       note.classList.add('note');
       note.textContent = `${inputText.value}`;
       column.append(note);
-      
-        const columnL = document.querySelector('.add_up').closest('.column');
-        document.querySelector('.add_up').remove();
-        document.querySelector('.input').remove();
-        document.querySelector('.add_del').remove();
-        const button = document.createElement('button');
-        button.classList.add('add');
-        button.classList.add('add_null');
-        button.textContent = 'Добавить';
-        columnL.append(button);
-      
+
+      const columnL = document.querySelector('.add_up').closest('.column');
+      document.querySelector('.add_up').remove();
+      document.querySelector('.input').remove();
+      document.querySelector('.add_del').remove();
+      const button = document.createElement('button');
+      button.classList.add('add');
+      button.classList.add('add_null');
+      button.textContent = 'Добавить';
+      columnL.append(button);
     }
   });
 }
