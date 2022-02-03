@@ -15,11 +15,17 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
+display: flex;
+flex-wrap: wrap;
 }
 .column_title {
-    font-size: 20px;
+    font-size: 30px;
+    width: 100%;
+    font-weight: bold;
     color: navy;
     text-align: center;
+    text-transform: uppercase;
+
 }
 .column_T {
     background-color: rgb(247, 103, 115);
@@ -30,8 +36,41 @@ body {
 .column_D {
     background-color: rgb(141, 233, 141);
 }
-.button {
-    width: 100%;
+.add {
+    width: 90%;
     height: 30px;
-    background-color:  Darkgray;
+    background-color:  rgb(231, 216, 216);
+    border-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 5%; 
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+
+}
+.add_up {
+    background-color: green;
+    color: white;
+}
+.input {
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+   margin-left: auto;
+   margin-right: auto;
+    padding: 0;
+    margin-bottom: 5%;
+    font-size: 15px;
+    
+}
+.note {
+    background-color:  rgb(231, 216, 216);
+    width: 90%;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    margin-bottom: 5%;
 }
