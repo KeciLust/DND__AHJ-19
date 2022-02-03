@@ -34,8 +34,12 @@ export default function move() {
       return;
     }
     const sibl = document.elementFromPoint(e.clientX, e.clientY);
-    
-    
+    if (!sibl.closest('.column')) {
+      document.body.removeChild(dropNote);
+      dragNote = null;
+      dropNote = null;
+      return;
+    }
     sibl.insertBefore(dragNote, sibl.lastChild);
     document.body.removeChild(dropNote);
     dragNote = null;
