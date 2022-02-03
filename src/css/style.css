@@ -1,0 +1,32 @@
+body {
+    background-color: black;
+}
+.container {
+    width: 95%;
+    background-color: rgb(122, 195, 236);
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    margin-top: 50px;
+}
+.column{
+    width: 30%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.column_title {
+    font-size: 20px;
+    color: navy;
+    text-align: center;
+}
+.column_T {
+    background-color: rgb(247, 103, 115);
+}
+.column_P {
+    background-color: rgb(241, 243, 125);
+}
+.column_D {
+    background-color: rgb(141, 233, 141);
+}
