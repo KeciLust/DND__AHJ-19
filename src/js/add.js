@@ -30,7 +30,7 @@ export default function add() {
     buttonUp.classList.add('add_up');
     buttonDel.style.width = '40%';
     buttonUp.style.width = '40%';
-    buttonDel.textContent = 'Стереть';
+    buttonDel.textContent = 'Закрыть';
     buttonUp.textContent = 'Записать';
     input.classList.add('input');
     input.placeholder = 'Введите заметку';
@@ -38,6 +38,18 @@ export default function add() {
     buttonAdd.remove();
     column.append(buttonUp);
     column.append(buttonDel);
+    buttonDel.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const columnL = document.querySelector('.add_up').closest('.column');
+      document.querySelector('.add_up').remove();
+      document.querySelector('.input').remove();
+      document.querySelector('.add_del').remove();
+      const button = document.createElement('button');
+      button.classList.add('add');
+      button.classList.add('add_null');
+      button.textContent = 'Добавить';
+      columnL.append(button);
+    });
     addNote();
   });
 }

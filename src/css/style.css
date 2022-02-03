@@ -76,4 +76,14 @@ body {
     font-size: 20px;
     margin-bottom: 20px;
     display: flex;
+    justify-content: space-between;
+}
+.res {
+    color: red;
+    background-color: rgb(165, 219, 233);
+    border: 0;
+    
+}
+.res::after {
+    content: '\2718';
 }
