@@ -1,3 +1,5 @@
+import addNote from './addNote';
+
 export default function add() {
   document.addEventListener('click', (e) => {
     e.preventDefault();
@@ -6,27 +8,36 @@ export default function add() {
       return;
     }
     const column = e.target.closest('.column');
-    const del = document.querySelector('.add_up');
-    if (del) {
-      del.classList.remove('add_up');
-      del.classList.add('add_null');
-      del.style.width = '90%';
+
+    if (document.querySelector('.add_up')) {
+      const columnL = document.querySelector('.add_up').closest('.column');
+      document.querySelector('.add_up').remove();
       document.querySelector('.input').remove();
       document.querySelector('.add_del').remove();
+      const button = document.createElement('button');
+      button.classList.add('add');
+      button.classList.add('add_null');
+      button.textContent = 'Добавить';
+      columnL.append(button);
     }
 
-    buttonAdd.classList.add('add_up');
-    buttonAdd.classList.remove('add_null');
     const input = document.createElement('textarea');
     const buttonDel = document.createElement('button');
+    const buttonUp = document.createElement('button');
     buttonDel.classList.add('add');
     buttonDel.classList.add('add_del');
+    buttonUp.classList.add('add');
+    buttonUp.classList.add('add_up');
     buttonDel.style.width = '40%';
-    buttonAdd.style.width = '40%';
+    buttonUp.style.width = '40%';
     buttonDel.textContent = 'Стереть';
+    buttonUp.textContent = 'Записать';
     input.classList.add('input');
     input.placeholder = 'Введите заметку';
     column.insertBefore(input, buttonAdd);
+    buttonAdd.remove();
+    column.append(buttonUp);
     column.append(buttonDel);
+    addNote();
   });
 }
