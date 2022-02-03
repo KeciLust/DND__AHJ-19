@@ -1,7 +1,8 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/te5dy12jerdhg6pu?svg=true)](https://ci.appveyor.com/project/KeciLust/env-ahj-19)
+[![Build status](https://ci.appveyor.com/api/projects/status/20wm39ssyoy1a3ig?svg=true)](https://ci.appveyor.com/project/KeciLust/dnd-ahj-19)
 
-Домашка №1
 
-ENV_AHJ-19
+Домашка №6
 
-https://kecilust.github.io/ENV__AHJ-19/
+DND_AHJ-19
+
+https://kecilust.github.io/DND__AHJ-19/
